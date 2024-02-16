@@ -19,7 +19,7 @@ const App = () => {
       <button onClick={() => sayHello()}>Test</button>
       <div className="card">
         <p>
-          Edit <code>src/App.tsx</code> and run bun run build
+          Edit <code>src/App.tsx</code> and run bun run dev
         </p>
       </div>
     </>
