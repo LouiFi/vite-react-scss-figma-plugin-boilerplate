@@ -10,6 +10,7 @@ import compileFigmaPlugin from "./scripts/vite/vite-compile-figma-plugin";
 
 export default defineConfig({
   plugins: [
+    compileFigmaPlugin(["./src/index.ts"]),
     react(),
     viteSingleFile(),
     richSvg(),
@@ -19,8 +20,11 @@ export default defineConfig({
           src: "manifest.json",
           dest: "./",
         },
+        {
+          src: "./src/dist/index.js",
+          dest: "./",
+        },
       ],
     }),
-    compileFigmaPlugin(["./src/index.ts"]),
   ],
 });
